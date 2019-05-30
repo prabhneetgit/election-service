@@ -33,9 +33,9 @@ public class ElectionController {
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 
-    @RequestMapping(value = "/summary", method = RequestMethod.GET)
-    public ResponseEntity<Map<String, List<Election>>> getElectionSummary() {
-        List<Election> elections = mongoTemplate.getCollection("election").distinct("title");
-        return new ResponseEntity<>(Collections.singletonMap("elections", elections), HttpStatus.OK);
-    }
+//    @RequestMapping(value = "/summary", method = RequestMethod.GET)
+//    public ResponseEntity<Map<String, List<Election>>> getElectionSummary() {
+//        List<Election> elections = mongoTemplate.getCollection("election").distinct("title");
+//        return new ResponseEntity<>(Collections.singletonMap("elections", elections), HttpStatus.OK);
+//    }
 }
